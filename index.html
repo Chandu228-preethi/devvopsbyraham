@@ -1,0 +1,14 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: copying a file
+      copy:
+        dest: app.yml
+        content: |
+          app=swiggy
+          version=3.0
+          platform=java-1.8.0
+          webserver_url=abc.com
+          app_url=abc.com
+          db_server=postgres
